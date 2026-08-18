@@ -1,0 +1,110 @@
+/* ============================================================
+   Footer
+   ============================================================ */
+
+.footer {
+  background-color: var(--color-bg);
+  padding-block: var(--space-8) var(--space-8);
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-12);
+  margin-bottom: var(--space-16);
+}
+
+/* ---- Brand Column ---------------------------------------- */
+.footer__brand-col {
+  max-width: 320px;
+}
+
+.footer__logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: var(--space-4);
+  transition: opacity var(--transition-fast);
+}
+.footer__logo:hover {
+  opacity: 0.9;
+}
+
+.footer__logo-dot {
+  color: var(--color-accent);
+}
+
+.footer__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ---- Navigation Columns ---------------------------------- */
+.footer__nav {
+  display: flex;
+  gap: var(--space-24);
+}
+
+.footer__nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer__nav-heading {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.footer__link {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  padding-block: 4px;
+}
+
+.footer__link:hover {
+  color: var(--color-text-primary);
+}
+
+/* ---- Bottom Row ------------------------------------------ */
+.footer__bottom {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-8);
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .footer {
+    padding-block: var(--space-8) var(--space-8);
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: var(--space-10);
+    margin-bottom: var(--space-12);
+  }
+  
+  .footer__nav {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+}

@@ -1,0 +1,307 @@
+/* ============================================================
+   How It Works section
+   ============================================================ */
+
+.hiw {
+  padding-block: var(--space-24);
+}
+
+/* ---- Header ---------------------------------------------- */
+.hiw__header {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: var(--space-24);
+}
+
+.hiw__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.hiw__heading {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.hiw__subheading {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- Grid & Steps ---------------------------------------- */
+.hiw__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  position: relative;
+}
+
+.hiw__step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Subtle arrows between steps */
+@media (min-width: 901px) {
+  .hiw__step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    top: 4px;
+    right: calc(-1 * var(--space-4) - 10px);
+    color: var(--color-border);
+    font-size: 1.25rem;
+    pointer-events: none;
+  }
+}
+
+.hiw__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--color-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: var(--space-6);
+}
+
+.hiw__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.hiw__description {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+  min-height: 3rem; /* Reserves space for 2 lines of text */
+}
+
+/* ============================================================
+   UI Demonstrations
+   ============================================================ */
+.hiw__mock {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Step 01: Resume Upload ---- */
+.hiw-upload__file {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.hiw-upload__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.hiw-upload__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hiw-upload__name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.hiw-upload__meta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.hiw-upload__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #22c55e;
+  background-color: rgba(34, 197, 94, 0.1);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* ---- Step 02: Target Job ---- */
+.hiw-job__title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.hiw-job__divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin-bottom: var(--space-3);
+}
+
+.hiw-job__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.hiw-job__tag {
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+}
+
+.hiw-job__indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--color-accent);
+}
+
+.hiw-job__indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+}
+
+/* ---- Step 03: Action Plan ---- */
+.hiw-plan__score {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-4);
+}
+
+.hiw-plan__label {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.hiw-plan__value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.hiw-plan__groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.hiw-plan__group-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.hiw-plan__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+.hiw-plan__item:last-child {
+  margin-bottom: 0;
+}
+
+.hiw-plan__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+.hiw-plan__icon--success {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+.hiw-plan__icon--warning {
+  background-color: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+
+.hiw-plan__cta {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  transition: color var(--transition-fast);
+}
+.hiw-plan__cta:hover {
+  color: var(--color-text-primary);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .hiw {
+    padding-block: var(--space-16);
+  }
+
+  .hiw__header {
+    margin-bottom: var(--space-16);
+  }
+
+  .hiw__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+  }
+
+  /* Vertical arrows for mobile stacking */
+  .hiw__step:not(:last-child)::after {
+    content: '↓';
+    position: absolute;
+    bottom: calc(-1 * var(--space-8) - 12px);
+    left: 12px;
+    color: var(--color-border);
+    font-size: 1.25rem;
+  }
+}

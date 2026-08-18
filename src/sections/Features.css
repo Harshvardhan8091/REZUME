@@ -1,0 +1,179 @@
+/* ============================================================
+   Features section
+   ============================================================ */
+
+.features {
+  padding-block: var(--space-24);
+  /* The background is naturally the page background (--color-bg) */
+}
+
+/* ---- Header ---------------------------------------------- */
+.features__header {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: var(--space-16);
+}
+
+.features__eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.features__heading {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.features__subheading {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+/* ---- Grid ------------------------------------------------ */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* ============================================================
+   Custom UI Demonstrations (Inside the cards)
+   ============================================================ */
+
+.demo-box {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+}
+
+/* ---- ATS Demo ---- */
+.demo-ats__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-2);
+}
+
+.demo-ats__label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.demo-ats__value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.demo-ats__track {
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.demo-ats__fill {
+  height: 100%;
+  width: 92%;
+  background-color: var(--color-accent);
+  border-radius: 100px;
+}
+
+/* ---- Skills Demo ---- */
+.demo-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.demo-skill {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-primary);
+  border: 1px solid transparent;
+}
+
+/* Visually indicate a missing skill */
+.demo-skill--missing {
+  background-color: transparent;
+  color: var(--color-text-muted);
+  border: 1px dashed var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.demo-skill--missing::after {
+  content: "Missing";
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+/* ---- Feedback Demo ---- */
+.demo-feedback__header {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-feedback__block {
+  margin-bottom: var(--space-2);
+}
+.demo-feedback__block:last-child {
+  margin-bottom: 0;
+}
+
+.demo-feedback__label {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.demo-feedback__text {
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+.demo-feedback__text--strike {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .features {
+    padding-block: var(--space-16);
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}

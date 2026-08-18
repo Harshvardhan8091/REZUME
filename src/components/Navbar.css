@@ -1,0 +1,88 @@
+/* ============================================================
+   Navbar
+   ============================================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background-color: rgba(14, 14, 16, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ---- Logo ------------------------------------------------ */
+.navbar__logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.navbar__logo-dot {
+  color: var(--color-accent);
+}
+
+/* ---- Centre nav links ------------------------------------ */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+/* ---- Right-side actions ---------------------------------- */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+/* ---- Shared link style ----------------------------------- */
+.navbar__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.navbar__link:hover {
+  color: var(--color-text-primary);
+}
+
+/* ---- Primary CTA button ---------------------------------- */
+.navbar__cta {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.5rem 1.125rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.navbar__cta:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* ---- Responsive ------------------------------------------ */
+@media (max-width: 768px) {
+  .navbar__nav {
+    display: none; /* mobile menu can be added later */
+  }
+
+  .navbar__actions {
+    gap: var(--space-4);
+  }
+}
