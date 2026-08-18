@@ -60,6 +60,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Ensure scroll navigation accounts for fixed navbar + breathing room */
+  scroll-padding-top: calc(var(--nav-height) + var(--space-6));
 }
 
 body {
